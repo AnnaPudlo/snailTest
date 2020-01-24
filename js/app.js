@@ -1,5 +1,6 @@
 $(".ba-menu-btn").click(function() {
     $('.ba-nav').toggleClass('hidden-before-lg');
+    $(".ba-menu-btn").toggleClass("ba-btn-burger--active");
 })
 
 $(".ba-btn-lang").click(function() {
@@ -13,3 +14,11 @@ $(".ba-lang li a").click(function(e) {
     $(".ba-lang").toggleClass('hidden');
     $(".ba-arrow").toggleClass("fa-angle-down fa-angle-up");
 });
+
+$('.ba-btn-consult, .ba-menu-btn').hover(
+    function () {
+        $(this).addClass('animated rubberBand');
+    },
+    function () {
+        $(this).removeClass('animated rubberBand');
+    });
