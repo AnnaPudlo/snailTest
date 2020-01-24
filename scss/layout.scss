@@ -1,8 +1,15 @@
-// variables
-$containerWidth: 1170px;
-$gap: 15px;
-$colCount: 12;
-$colWidth: 100% / $colCount;
+/* variables */
+$containerWidth: 1200px;
+$colGups: 15px;
+$columns: 12;
+$breakpoints: (
+    xs: 0,
+    sm: 321px,
+    md: 769px,
+    lg: 1025px,
+    xl: 1201px,
+    xxl: 1441px
+);
 
 * {
     box-sizing: border-box;
@@ -12,31 +19,54 @@ $colWidth: 100% / $colCount;
     max-width: $containerWidth;
     width: 100%;
     margin: 0 auto;
-    padding: 0 $gap;
+    padding: 0 $colGups;
 }
 
 /* ba-grid */
 
-.ba-row {
+.row {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -$gap;
-    margin-right: -$gap;
+    margin-left: -$colGups;
+    margin-right: -$colGups;
 }
 
-.ba-row+.ba-row {
+.row+.row {
     margin-top: 1rem;
 }
 
-[class^='ba-col'] {
-    padding-left: $gap;
-    padding-right: $gap;
-    width: 100%;
-}
+@each $breakpoint in $breakpoints {
+    $name: nth($breakpoint, 1);
+    $size: nth($breakpoint, 2);
 
-@for $i from 1 through $colCount {
-    .ba-col-#{$i} { width: $colWidth * $i; }
-  }
+    @media only screen and (min-width: $size) {
+
+        [class*="col-#{$name}"] {
+            box-sizing: border-box;
+            padding-right: $colGups;
+            padding-left: $colGups;
+        }
+
+        .hidden-#{$name} {
+            display: none !important;
+        }
+
+        @for $i from 1 through $columns {
+
+            .col-#{$name}-#{$i} {
+                flex-basis: 100% / $columns * $i;
+                max-width: 100% / $columns * $i;
+            }
+        }
+    }
+
+    @media only screen and (max-width: $size) {
+
+        .hidden-before-#{$name} {
+            display: none !important;
+        }
+    }
+}
 
 /* ba-common */
 
@@ -54,4 +84,20 @@ $colWidth: 100% / $colCount;
 
 .ba-text-justify {
     text-align: justify;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
 }

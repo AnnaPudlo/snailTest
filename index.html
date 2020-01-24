@@ -1,38 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ba-starter</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap&subset=cyrillic"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/flags.css">
     <link rel="stylesheet" href="styles/app.css">
 
     <link rel="icon" href="favicon.ico">
 </head>
+
 <body>
 
-    <header class="ba-header">
-        <div class="container">
+    <header class="container ba-header">
+        <div class="ba-header-wrapper">
+            <div class="col-xs-12 col-lg-1 ba-header-top">
+                <a href="#" class="ba-logo">
+                    <img src="img/snail_logo.png" alt="Happy Snail" class="ba-logo__img">
+                </a>
+                <div class="ba-nav-top hidden-lg">                    
 
-            <a href="#" class="ba-logo"></a>
+                    <div class="ba-lang-wrap">
+                        <button class="ba-btn ba-btn-lang" aria-label="choose language">
+                            <div class="ba-lang-chosen">
+                                <span class="flag flag-ru"></span> Ru
+                            </div>
+                            <span class="ba-arrow fas fa-angle-down"></span>
+                         </button>
+                        <ul class="ba-lang hidden">
+                            <li><a href="" class="ba-lang-link"><span class="flag flag-ru"></span> Ru</a></li>
+                            <li><a href="" class="ba-lang-link"><span class="flag flag-gb"></span> En</a></li>
+                            <li><a href="" class="ba-lang-link"><span class="flag flag-es"></span> Es</a></li>
+                        </ul>
+                    </div>
 
-            <nav>
+                    <button class="ba-btn ba-btn-consult ba-btn-consult_small far fa-comments"></button>
+
+                    <button class="ba-btn ba-menu-btn ba-btn-burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+
+
+            <nav class="ba-nav col-xs-12 col-lg-11 hidden-before-lg">
+
                 <ul class="ba-menu">
                     <li class="ba-menu__item">
-                        <a href="#" class="ba-menu__link">item</a>
+                        <a href="#" class="ba-menu__link">Главная</a>
                     </li>
                     <li class="ba-menu__item">
-                        <a href="#" class="ba-menu__link">item</a>
+                        <a href="#" class="ba-menu__link">О нас</a>
                     </li>
                     <li class="ba-menu__item">
-                        <a href="#" class="ba-menu__link">item</a>
+                        <a href="#" class="ba-menu__link">Услуги</a>
                     </li>
                     <li class="ba-menu__item">
-                        <a href="#" class="ba-menu__link">item</a>
+                        <a href="#" class="ba-menu__link">Технология</a>
+                    </li>
+                    <li class="ba-menu__item">
+                        <a href="#" class="ba-menu__link">Гастротуризм</a>
+                    </li>
+                    <li class="ba-menu__item">
+                        <a href="#" class="ba-menu__link">Партнерам</a>
+                    </li>
+                    <li class="ba-menu__item">
+                        <a href="#" class="ba-menu__link">Контакты</a>
                     </li>
                 </ul>
+
+                <div class="ba-lang-wrap hidden-before-lg">
+                    <button class="ba-btn ba-btn-lang" aria-label="choose language">
+                        <div class="ba-lang-chosen">
+                            <span class="flag flag-ru"></span> Ru
+                        </div>
+                        <span class="ba-arrow fas fa-angle-down"></span>
+                     </button>
+                    <ul class="ba-lang hidden">
+                        <li><a href="" class="ba-lang-link"><span class="flag flag-ru"></span> Ru</a></li>
+                        <li><a href="" class="ba-lang-link"><span class="flag flag-gb"></span> En</a></li>
+                        <li><a href="" class="ba-lang-link"><span class="flag flag-es"></span> Es</a></li>
+                    </ul>
+                </div>
+
+                <button class="ba-btn ba-btn-consult hidden-before-lg">Консультация</button>
+
             </nav>
 
         </div>
@@ -45,12 +106,15 @@
             </div>
         </section>
     </main>
-    
+
     <footer class="ba-footer">
         <div class="container">
-            
+
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
+
 </html>
