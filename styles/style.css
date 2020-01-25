@@ -135,6 +135,14 @@ body {
   .ba-btn-submit {
     background-color: #305C2D;
     margin: 0; }
+  .ba-btn-scroll {
+    font-weight: 600;
+    font-size: 0.625rem;
+    line-height: 1.2em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #305C2D;
+    margin-bottom: 5px; }
 
 .ba-lang {
   position: absolute;
@@ -178,13 +186,24 @@ body {
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden; }
-  .ba-hero svg {
+  .ba-hero__scroll {
     position: absolute;
-    bottom: -2px;
+    bottom: 0;
     left: 0;
     right: 0;
+    max-width: 316px;
+    width: 100%;
+    height: 58px;
     margin: 0 auto;
     max-width: 100%; }
+    .ba-hero__scroll svg {
+      width: 100%; }
+    .ba-hero__scroll .ba-btn-scroll {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%; }
   .ba-hero-wrapper {
     padding-top: 13.6363vh;
     text-align: left; }

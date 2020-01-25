@@ -57,25 +57,25 @@
 
                 <ul class="ba-menu">
                     <li class="ba-menu__item">
-                        <a href="#" class="ba-menu__link">Главная</a>
+                        <a href="#main" class="ba-menu__link">Главная</a>
                     </li>
                     <li class="ba-menu__item">
-                        <a href="#" class="ba-menu__link">О нас</a>
+                        <a href="#about" class="ba-menu__link">О нас</a>
                     </li>
                     <li class="ba-menu__item">
-                        <a href="#" class="ba-menu__link">Услуги</a>
+                        <a href="#services" class="ba-menu__link">Услуги</a>
                     </li>
                     <li class="ba-menu__item">
-                        <a href="#" class="ba-menu__link">Технология</a>
+                        <a href="#technologies" class="ba-menu__link">Технология</a>
                     </li>
                     <li class="ba-menu__item">
-                        <a href="#" class="ba-menu__link">Гастротуризм</a>
+                        <a href="#feedback" class="ba-menu__link">Гастротуризм</a>
                     </li>
                     <li class="ba-menu__item">
-                        <a href="#" class="ba-menu__link">Партнерам</a>
+                        <a href="#reasons-why" class="ba-menu__link">Партнерам</a>
                     </li>
                     <li class="ba-menu__item">
-                        <a href="#" class="ba-menu__link">Контакты</a>
+                        <a href="#contacts" class="ba-menu__link">Контакты</a>
                     </li>
                 </ul>
 
@@ -99,7 +99,7 @@
     </header>
 
     <main>
-        <section class="ba-section ba-hero">
+        <section id="main" class="ba-section ba-hero">
             <div class="container ba-hero-wrapper">
                 <h1 class="ba-hero__title">Выращивание и Разведение Улиток</h1>
                 <p class="ba-hero__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae dolorem, ab
@@ -107,23 +107,22 @@
                     repellendus aspernatur ad magni ipsa nam facere repellat.</p>
             </div>
 
-            <svg width="316" height="63" viewBox="0 0 316 63" fill="white" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M241.496 30.8421C259.159 45.111 293.018 61.5749 316 62.5142H158V0.0140802C177.911 -0.203933 205.5 1.76318 241.496 30.8421Z"
-                    fill="white" />
-                <path
-                    d="M74.5041 30.8421C56.528 44.5226 22.9818 61.5749 0 62.5142H158V0.0140802C137.447 0.0140549 104.5 8.01404 74.5041 30.8421Z"
-                    fill="white" />
-                <defs>
-                    <clipPath id="clip0">
-                        <rect x="167" y="14.514" width="21" height="21" transform="rotate(90 167 14.514)"
-                            fill="white" />
-                    </clipPath>
-                </defs>
-            </svg>
+            <div class="ba-hero__scroll animated infinite pulse">
+                <svg class="icon" width="316px" height="59px">
+                    <!-- <use xlink:href="sprite.svg#scrollDown"></use> -->
+                    <use xlink:href="#scrollDown"></use>
+                </svg>
+                <button class="ba-btn ba-btn-scroll">
+                    <svg class="icon" width="15" height="22">
+                        <!-- <use xlink:href="sprite.svg#scrollArrow"></use> -->
+                        <use xlink:href="#scrollArrow"></use>
+                    </svg>
+                    <span>scroll down</span>    
+                </button>
+            </div>
         </section>
 
-        <section class="ba-section ba-about">
+        <section id="about" class="ba-section ba-about">
             <div class="container ba-about-wrapper">
                 <h2 class="ba-section__title">О Нас</h2>
                 <p class="ba-section__abstracts">Мы кипрская компания,
@@ -189,7 +188,7 @@
             </div>
         </section>
 
-        <section class="ba-section ba-pro">
+        <section id="reasons-why" class="ba-section ba-pro">
             <div class="container ba-pro-wrapper">
                 <h2 class="ba-section__title">Почему мы?</h2>
                 <p class="ba-section__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -275,7 +274,7 @@
             </div>
         </section>
 
-        <section class="ba-section ba-services">
+        <section id="services" class="ba-section ba-services">
             <div class="container ba-services-wrapper">
                 <h2 class="ba-section__title">Услуги</h2>
                 <p class="ba-section__abstracts ba-services__abstracts">
@@ -328,7 +327,7 @@
             </div>
         </section>
 
-        <section class="ba-section ba-technologies">
+        <section id="technology" class="ba-section ba-technologies">
             <div class="container ba-technologies-wrapper">
                 <h2 class="ba-section__title">Технологии</h2>
 
@@ -411,7 +410,7 @@
             </div>
         </section>
 
-        <section class="ba-section ba-ontouch">
+        <section id="feedback" class="ba-section ba-ontouch">
             <div class="container ba-ontouch-wrapper">
                 <h2 class="ba-section__title ba-ontouch__title">Остались вопросы?</h2>
                 <form action="" class="ba-ontouch-form">
@@ -425,7 +424,7 @@
         </section>
     </main>
 
-    <footer class="ba-footer">
+    <footer id="contacts" class="ba-footer">
         <div class="container ba-footer-wrapper">
             <div class="row">
                 <div class="col-xs-12 col-sm-4 col-md-2">
@@ -493,7 +492,9 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
 
     <svg display="none" xmlns="http://www.w3.org/2000/svg">
@@ -727,16 +728,17 @@
                     fill="#305C2D" />
             </g>
         </symbol>
-        <symbol id="scrollDown" viewBox="0 0 316 63">
-            <path
-                d="M241.496 30.8421C259.159 45.111 293.018 61.5749 316 62.5142H158V0.0140802C177.911 -0.203933 205.5 1.76318 241.496 30.8421Z"
-                fill="white" />
-            <path
-                d="M74.5041 30.8421C56.528 44.5226 22.9818 61.5749 0 62.5142H158V0.0140802C137.447 0.0140549 104.5 8.01404 74.5041 30.8421Z"
-                fill="white" />
+        <symbol id="scrollDown" viewBox="0 0 316 63" fill="white">
+            <path d="M241.496 30.8421C259.159 45.111 293.018 61.5749 316 62.5142H158V0.0140802C177.911 -0.203933 205.5 1.76318 241.496 30.8421Z" fill="white"/>
+            <path d="M74.5041 30.8421C56.528 44.5226 22.9818 61.5749 0 62.5142H158V0.0140802C137.447 0.0140549 104.5 8.01404 74.5041 30.8421Z" fill="white"/>
         </symbol>
-
+        <symbol id="scrollArrow" viewBox="0 0 15 22">
+            <path d="M14.6609 14.6552C14.957 14.3691 14.957 13.893 14.6609 13.5969C14.3749 13.3108 13.8987 13.3108 13.6133 13.5969L8.24691 18.9632L8.24691 1.25494C8.24624 0.842142 7.91814 0.514038 7.50534 0.514038C7.09254 0.514038 6.75377 0.842142 6.75377 1.25494L6.75377 18.9632L1.3974 13.5969C1.10131 13.3108 0.624489 13.3108 0.339065 13.5969C0.042971 13.893 0.042971 14.3698 0.339065 14.6552L6.97584 21.292C7.26193 21.5881 7.73808 21.5881 8.0235 21.292L14.6609 14.6552Z" fill="#305C2D"/>
+        </symbol>
     </svg>
+
+
+        
 </body>
 
 </html>

@@ -201,6 +201,17 @@ body {
         background-color: $textGreen;
         margin: 0;
     }
+
+    
+    &-scroll {
+        font-weight: 600;
+        font-size: 0.625rem;
+        line-height: 1.2em;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: $textGreen;
+        margin-bottom: 5px;
+    }
 }
 
 .ba-lang {
@@ -258,14 +269,26 @@ body {
     position: relative;
     overflow: hidden;
 
-
-    svg {
+    &__scroll{
         position: absolute;
-        bottom: -2px;
+        bottom: 0;
         left: 0;
         right: 0;
+        max-width: 316px;
+        width: 100%;
+        height: 58px;
         margin: 0 auto;
         max-width: 100%;
+        svg {
+            width: 100%;
+        }
+        .ba-btn-scroll {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
     }
 
     &-wrapper {

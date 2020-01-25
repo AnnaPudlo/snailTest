@@ -21,4 +21,15 @@ $('.ba-btn-consult, .ba-menu-btn, .ba-btn-more, .ba-btn-submit').hover(
     },
     function () {
         $(this).removeClass('animated rubberBand');
-    });
+});
+
+$(".ba-menu__link").click(function () {
+    var elementClick = $(this).attr("href");
+    var destination = $(elementClick).offset().top;
+    $('html').animate({ scrollTop: destination }, 2000);
+});
+    
+$(".ba-btn-scroll").click(function () {
+    var destination = $('#about').offset().top;
+    $('html').animate({ scrollTop: destination }, 2000);
+});
