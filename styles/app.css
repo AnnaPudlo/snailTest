@@ -956,6 +956,9 @@ body {
   font-size: 0.875rem;
   line-height: 2em; }
 
+.ba-footer__link:hover {
+  color: #305C2D; }
+
 .ba-footer__label {
   font-weight: 500; }
 
@@ -992,6 +995,11 @@ body {
     border-radius: 50%;
     border: 1px solid #000;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    transition: transform 0.5s; }
     .ba-social__link span {
       margin: auto; }
+    .ba-social__link:hover {
+      border-color: #305C2D;
+      color: #305C2D;
+      transform: rotate(360deg); }

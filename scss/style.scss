@@ -845,6 +845,12 @@ body {
         line-height: 2em;
     }
 
+    &__link {
+        &:hover {
+            color: $textGreen;
+        }
+    }
+
     &__label {
         font-weight: 500;
     }
@@ -890,9 +896,16 @@ body {
         border: 1px solid #000;
         display: flex;
         align-items: center;
+        transition: transform 0.5s;
 
         span {
             margin: auto;
+        }
+
+        &:hover {
+            border-color: $textGreen;
+            color: $textGreen;
+            transform: rotate(360deg);
         }
     }
 }
