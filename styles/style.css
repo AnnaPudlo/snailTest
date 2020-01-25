@@ -426,5 +426,38 @@ body {
     .ba-technology-icon .icon {
       max-width: 100%;
       max-height: 100%; }
+  .ba-technology__title_big {
+    font-size: 1.5rem;
+    line-height: 1em;
+    font-weight: 600; }
   .ba-technology__desc {
     min-width: 100%; }
+    .ba-technology__desc_small {
+      line-height: 1.5em;
+      color: #7B7B7B; }
+  .ba-technology-2 {
+    padding-top: 85px; }
+  .ba-technology_tal {
+    text-align: left;
+    max-width: 465px;
+    margin: 0 auto; }
+  .ba-technology__link {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 1.25em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #305C2D; }
+    .ba-technology__link:before {
+      content: '';
+      display: inline-block;
+      width: 60px;
+      height: 2px;
+      background-color: #305C2D;
+      margin-bottom: 0.25em;
+      margin-right: 20px; }
+  .ba-technology-video {
+    width: 100%; }
+    .ba-technology-video iframe {
+      max-width: 100%; }

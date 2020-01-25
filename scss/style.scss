@@ -599,10 +599,59 @@ body {
 
     &__title {
         @extend .ba-pro__name;
+
+        &_big {
+            font-size: 1.5rem;
+            line-height: 1em;
+            font-weight: 600;
+        }
     }
 
     &__desc {
         @extend .ba-pro__text;
         min-width: 100%;
+
+        &_small {
+            line-height: 1.5em;
+            color: $textGray;
+        }
+    }
+
+    &-2 {
+        padding-top: 85px;
+    }
+
+    &_tal {
+        text-align: left;
+        max-width: 465px;
+        margin: 0 auto;
+    }
+
+    &__link {
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.75rem;
+        line-height: 1.25em;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: $textGreen;
+        
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 60px;
+            height: 2px;
+            background-color: $textGreen;
+            margin-bottom: 0.25em;
+            margin-right: 20px;
+        }
+    }
+
+    &-video {
+        width: 100%;
+
+        iframe {
+            max-width: 100%;
+        }
     }
 }
