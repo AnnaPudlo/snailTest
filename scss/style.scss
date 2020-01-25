@@ -190,6 +190,11 @@ body {
             transition: 0.5s;
         }
     }
+
+    &-more {
+        @extend .ba-btn-consult;
+        display: none;
+    }
 }
 
 .ba-lang {
@@ -392,19 +397,31 @@ body {
 }
 
 .ba-pro {
+
+    &-wrapper {
+        max-width: 957px;
+    }
     
     &-item {
         display: flex;
         align-items: flex-start;
         text-align: left;
         
-        min-height: 171px;
+        min-height: 181px;
+        max-width: 405px;
+        margin-right: auto;
+
+        &_left {
+            margin-right: 0;
+            margin-left: auto;
+        }
     }
 
     &-icon {
         height: 63px;
         width: 63px;
         margin-right: 15px;
+        margin-top: 36px;
 
         .icon {
             max-width: 100%;
@@ -414,7 +431,7 @@ body {
 
     &-info {
         position: relative;
-        padding-top: 56px;
+        padding-top: 36px;
         &:before{
             content:attr(dataCount);
             font-size: 140px;
@@ -438,5 +455,129 @@ body {
         font-size: 1rem;
         line-height: 1.6875em;
         color: $textDGray;
+        max-width: 305px;
+    }
+
+    .ba-btn-consult {
+        margin-top: 45px;
+        margin-bottom: 25px;
+    }
+}
+
+.ba-services {
+    &-wrapper {
+        max-width: 1006px;
+    }
+
+    &__abstracts {
+        max-width: 372px;
+        margin-bottom: 50px;
+    }
+}
+
+.ba-service {
+    text-align: left;
+    max-width: 312px;
+    height: 426px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 43px;
+    position: relative;
+    z-index: 1;
+    
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        background-color:rgba(255, 255, 255, 0.85);
+        transition: 0.5s;
+    }
+
+    &_1 {
+        background-image: url(../img/services-1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &_2 {
+        background-image: url(../img/services-2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &_3 {
+        background-image: url(../img/services-3.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &:hover {
+
+        &:before {
+            top: 15px;
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+            background-color:rgba(255, 255, 255, 0.4)
+        } 
+
+        .ba-service__info {
+            display: none;
+        }
+
+        .ba-btn-more {
+            display: block;
+        }
+    }
+
+    .ba-btn-more {
+        position: absolute;
+        top: 45%;
+    }
+
+    &__title {
+        font-size: 1.25rem;
+        line-height: 1em;
+        font-weight: 600;
+        color: $textGreen;
+
+        &:after {
+            content: '';
+            display: block;
+            width: 2px;
+            height: 30px;
+            background-color: $textGreen;
+            margin: 15px 0;
+        }
+
+        @media screen and (min-width: 769px){
+            font-size: 1.5rem;
+
+            &:after {
+                height: 60px;
+            }
+        }
+    }
+
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        font-size: 1rem;
+        line-height: 1.5em;
+        font-weight: 500;
+        color: #000;
+        margin-bottom: 1em;
+    }
+
+    @media screen and (max-width: 768px){
+        margin-top: 1rem;
     }
 }
