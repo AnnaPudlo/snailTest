@@ -15,7 +15,7 @@ $(".ba-lang li a").click(function(e) {
     $(".ba-arrow").toggleClass("fa-angle-down fa-angle-up");
 });
 
-$('.ba-btn-consult, .ba-menu-btn').hover(
+$('.ba-btn-consult, .ba-menu-btn, .ba-btn-more').hover(
     function () {
         $(this).addClass('animated rubberBand');
     },

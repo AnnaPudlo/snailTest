@@ -317,13 +317,13 @@ body {
     top: 0;
     left: 0; }
 
-.ba-pro__name {
+.ba-pro__name, .ba-technology__title {
   font-size: 1.25rem;
   font-weight: 500;
   line-height: 1.2em;
   color: #305C2D; }
 
-.ba-pro__text {
+.ba-pro__text, .ba-technology__desc {
   font-size: 1rem;
   line-height: 1.6875em;
   color: #646464;
@@ -381,7 +381,8 @@ body {
   .ba-service:hover .ba-service__info {
     display: none; }
   .ba-service:hover .ba-btn-more {
-    display: block; }
+    display: block;
+    z-index: 1; }
   .ba-service .ba-btn-more {
     position: absolute;
     top: 45%; }
@@ -415,3 +416,15 @@ body {
   @media screen and (max-width: 768px) {
     .ba-service {
       margin-top: 1rem; } }
+
+.ba-technology {
+  margin-top: 33px; }
+  .ba-technology-icon {
+    width: 69px;
+    height: 69px;
+    margin: auto; }
+    .ba-technology-icon .icon {
+      max-width: 100%;
+      max-height: 100%; }
+  .ba-technology__desc {
+    min-width: 100%; }
