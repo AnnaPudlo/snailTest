@@ -415,8 +415,10 @@
             <div class="container ba-ontouch-wrapper">
                 <h2 class="ba-section__title ba-ontouch__title">Остались вопросы?</h2>
                 <form action="" class="ba-ontouch-form">
-                    <input type="text" name="clientName" id="clientName" class="ba-inp ba-inp__clientName" placeholder="Имя">
-                    <input type="tel" name="clientPhone" id="clientPhone" class="ba-inp ba-inp__clientPhone" placeholder="Телефон">
+                    <input type="text" name="clientName" id="clientName" class="ba-inp ba-inp__clientName"
+                        placeholder="Имя" required>
+                    <input type="tel" name="clientPhone" id="clientPhone" class="ba-inp ba-inp__clientPhone"
+                        placeholder="Телефон" pattern="[0-9]{10-13}" required>
                     <button type="submit" class="ba-btn ba-btn-submit">Отправить</button>
                 </form>
             </div>
@@ -425,57 +427,67 @@
 
     <footer class="ba-footer">
         <div class="container ba-footer-wrapper">
-            <div class="ba-footer-media">
-                <a href="#" class="ba-logo">
-                    <img src="img/snail_logo.png" alt="Happy Snail" class="ba-logo__img">
-                </a>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-2">
+                    <div class="ba-footer-media">
+                        <a href="#" class="ba-logo">
+                            <img src="img/snail_logo.png" alt="Happy Snail" class="ba-logo__img">
+                        </a>
 
-                <div class="ba-social">
-                    <a href="#" class="ba-social__link" target="_blank">
-                        <span class="fab fa-facebook-f"></span>
-                    </a>
-                    <a href="#" class="ba-social__link" target="_blank">
-                        <span class="fab fa-instagram"></span>
-                    </a>
-                    <a href="#" class="ba-social__link" target="_blank">
-                        <span class="fab fa-twitter"></span>
-                    </a>
+                        <div class="ba-social">
+                            <a href="#" class="ba-social__link" target="_blank">
+                                <span class="fab fa-facebook-f"></span>
+                            </a>
+                            <a href="#" class="ba-social__link" target="_blank">
+                                <span class="fab fa-instagram"></span>
+                            </a>
+                            <a href="#" class="ba-social__link" target="_blank">
+                                <span class="fab fa-twitter"></span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="ba-footer-info">
-                    <h3 class="ba-footer__title">Главная</h3>
-                    <ul class="ba-footer__links">
-                        <li><a href="" class="ba-footer__link">Услуги</a></li>
-                        <li><a href="" class="ba-footer__link">Технология</a></li>
-                        <li><a href="" class="ba-footer__link">Гастротуризм</a></li>
-                    </ul>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <div class="ba-footer-info">
+                        <h3 class="ba-footer__title">Главная</h3>
+                        <ul class="ba-footer__links">
+                            <li><a href="" class="ba-footer__link">Услуги</a></li>
+                            <li><a href="" class="ba-footer__link">Технология</a></li>
+                            <li><a href="" class="ba-footer__link">Гастротуризм</a></li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="ba-footer-info">
-                    <h3 class="ba-footer__title">Помощь</h3>
-                    <ul class="ba-footer__links">
-                        <li><a href="" class="ba-footer__link">О нас</a></li>
-                        <li><a href="" class="ba-footer__link">Партнерам</a></li>
-                        <li><a href="" class="ba-footer__link">Контакты</a></li>
-                    </ul>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <div class="ba-footer-info">
+                        <h3 class="ba-footer__title">Помощь</h3>
+                        <ul class="ba-footer__links">
+                            <li><a href="" class="ba-footer__link">О нас</a></li>
+                            <li><a href="" class="ba-footer__link">Партнерам</a></li>
+                            <li><a href="" class="ba-footer__link">Контакты</a></li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="ba-footer-info">
-                    <h3 class="ba-footer__title">Контакты</h3>
-                    <ul class="ba-footer__links">
-                        <li>
-                            <span class="ba-footer__text">Адрес:</span>
-                            <span class="ba-footer__link">г. Харьков, ул.И Сирка, 24</span>
-                        </li>
-                        <li>
-                            <span class="ba-footer__text">Телефон:</span>
-                            <a href="tel:+37060571486" class="ba-footer__link">+370 605 71486</a>
-                        </li>
-                        <li>
-                            <span class="ba-footer__text">Email:</span>
-                            <a href="mailto:happysnail@gmail.com" class="ba-footer__link">happysnail@gmail.com</a>
-                        </li>
-                    </ul>
+                <div class="col-xs-12 col-md-4">
+                    <div class="ba-footer-info ba-footer-contacts">
+                        <h3 class="ba-footer__title">Контакты</h3>
+                        <div class="ba-footer-listwrap">
+                            <ul class="ba-footer__labels">
+                                <li><span class="ba-footer__label">Адрес:</span></li>
+                                <li><span class="ba-footer__label">Телефон:</span></li>
+                                <li><span class="ba-footer__label">Email:</span></li>
+                            </ul>
+                            <ul class="ba-footer__links">
+                                <li><span class="ba-footer__link">г. Харьков, ул.И Сирка, 24</span></li>
+                                <li><a href="tel:+37060571486" class="ba-footer__link">+370 605 71486</a></li>
+                                <li><a href="mailto:happysnail@gmail.com"
+                                        class="ba-footer__link">happysnail@gmail.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -723,6 +735,7 @@
                 d="M74.5041 30.8421C56.528 44.5226 22.9818 61.5749 0 62.5142H158V0.0140802C137.447 0.0140549 104.5 8.01404 74.5041 30.8421Z"
                 fill="white" />
         </symbol>
+
     </svg>
 </body>
 
