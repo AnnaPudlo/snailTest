@@ -113,7 +113,7 @@ body {
     width: 100%;
     height: 15px;
     text-transform: uppercase; }
-  .ba-btn-consult, .ba-btn-more {
+  .ba-btn-consult, .ba-btn-more, .ba-btn-submit {
     max-width: 200px;
     width: 100%;
     height: 50px;
@@ -133,6 +133,9 @@ body {
       transition: 0.5s; }
   .ba-btn-more {
     display: none; }
+  .ba-btn-submit {
+    background-color: #305C2D;
+    margin: 0; }
 
 .ba-lang {
   position: absolute;
@@ -329,7 +332,7 @@ body {
   color: #646464;
   max-width: 305px; }
 
-.ba-pro .ba-btn-consult, .ba-pro .ba-btn-more {
+.ba-pro .ba-btn-consult, .ba-pro .ba-btn-more, .ba-pro .ba-btn-submit {
   margin-top: 45px;
   margin-bottom: 25px; }
 
@@ -461,3 +464,39 @@ body {
     width: 100%; }
     .ba-technology-video iframe {
       max-width: 100%; }
+
+@media screen and (min-width: 769px) {
+  .ba-ontouch {
+    text-align: left; } }
+
+.ba-ontouch__title:after {
+  content: none; }
+
+.ba-ontouch-form {
+  max-width: 800px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 30px; }
+  @media screen and (min-width: 769px) {
+    .ba-ontouch-form {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      height: 50px; } }
+
+.ba-inp {
+  max-width: 250px;
+  height: 100%;
+  width: 100%;
+  font-size: 0.875rem;
+  line-height: 1.2143em;
+  font-weight: 500;
+  color: #305C2D;
+  border: none;
+  border-bottom: 1px solid #305C2D;
+  padding: 1rem; }
+  .ba-inp::placeholder {
+    color: #305C2D; }

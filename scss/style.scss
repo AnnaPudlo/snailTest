@@ -68,7 +68,7 @@ body {
 
 }
 
-.ba-menu{
+.ba-menu {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -194,6 +194,12 @@ body {
     &-more {
         @extend .ba-btn-consult;
         display: none;
+    }
+
+    &-submit {
+        @extend .ba-btn-consult;
+        background-color: $textGreen;
+        margin: 0;
     }
 }
 
@@ -653,5 +659,52 @@ body {
         iframe {
             max-width: 100%;
         }
+    }
+}
+
+.ba-ontouch {
+
+    @media screen and (min-width: 769px) {
+        text-align: left;
+    }
+
+    &__title {
+        &:after {
+            content: none;
+        }
+    }
+
+    &-form {
+        max-width: 800px;
+        height: 180px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 30px;
+
+        @media screen and (min-width: 769px) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            height: 50px;
+        }
+    }
+}
+
+.ba-inp {
+    max-width: 250px;
+    height: 100%;
+    width: 100%;
+    font-size: 0.875rem;
+    line-height: 1.2143em;
+    font-weight: 500;
+    color: $textGreen;
+    border: none;
+    border-bottom: 1px solid $textGreen;
+    padding: 1rem;
+
+    &::placeholder {
+        color: $textGreen;
     }
 }
