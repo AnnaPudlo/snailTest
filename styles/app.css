@@ -497,7 +497,6 @@ body {
 
 .ba-btn-consult:hover, .ba-btn-more:hover, .ba-btn-submit:hover,
 .ba-menu-btn:hover,
-.ba-btn-more:hover,
 .ba-btn-submit:hover {
   opacity: 0.75; }
 
@@ -663,21 +662,12 @@ body {
 .ba-pro {
   position: relative;
   padding-top: 130px;
-  padding-bottom: 256px; }
-  .ba-pro:before {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-image: url(../img/bg-reasons-why.svg);
-    background-size: cover;
-    background-repeat: no-repeat; }
+  padding-bottom: 256px;
+  background-image: url(../img/bg-reasons-top.svg), url(../img/bg-reasons-bottom.svg);
+  background-position: center top, center bottom;
+  background-repeat: no-repeat, no-repeat;
+  background-color: #f4f4f4;
+  background-size: contain; }
   .ba-pro-wrapper {
     max-width: 957px; }
   .ba-pro-item {
@@ -775,6 +765,9 @@ body {
   .ba-service:hover .ba-btn-more {
     display: block;
     z-index: 1; }
+    .ba-service:hover .ba-btn-more:hover {
+      background-color: #305C2D;
+      opacity: 1; }
   .ba-service .ba-btn-more {
     position: absolute;
     top: 45%; }
@@ -825,20 +818,8 @@ body {
     background-image: url(../img/bg-technologies-top.svg);
     background-size: cover;
     background-position: right top;
+    background-repeat: no-repeat;
     z-index: -1; }
-  .ba-technologies:after {
-    content: '';
-    position: absolute;
-    display: block;
-    right: 0;
-    left: 0;
-    bottom: -175px;
-    width: 100%;
-    height: 290px;
-    background-image: url(../img/bg-technologies-bottom.svg);
-    background-size: cover;
-    background-position: right bottom;
-    z-index: 1; }
 
 .ba-technology {
   margin-top: 33px; }
@@ -889,7 +870,11 @@ body {
   min-height: 535px;
   position: relative;
   padding-top: 283px;
-  padding-bottom: 92px; }
+  padding-bottom: 92px;
+  background-image: url(../img/bg-technologies-bottom.svg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain; }
   .ba-ontouch:before {
     content: '';
     position: absolute;
@@ -912,7 +897,7 @@ body {
     display: block;
     background-image: url(../img/snail-bg.png);
     background-repeat: no-repeat;
-    background-position: right top;
+    background-position: right top 1px;
     z-index: -1; }
   @media screen and (min-width: 769px) {
     .ba-ontouch {

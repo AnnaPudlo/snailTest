@@ -3,9 +3,10 @@ $(".ba-menu-btn").click(function() {
     $(".ba-menu-btn").toggleClass("ba-btn-burger--active");
 })
 
-$(".ba-btn-lang").click(function() {
+$(".ba-btn-lang").click(function(e) {
     $(".ba-lang").toggleClass('hidden');
     $(".ba-arrow").toggleClass("fa-angle-down fa-angle-up");
+
 });
 
 $(".ba-lang li a").click(function(e) {
@@ -14,6 +15,9 @@ $(".ba-lang li a").click(function(e) {
     $(".ba-lang").toggleClass('hidden');
     $(".ba-arrow").toggleClass("fa-angle-down fa-angle-up");
 });
+
+
+
 
 $(".ba-menu__link").click(function () {
     var elementClick = $(this).attr("href");
