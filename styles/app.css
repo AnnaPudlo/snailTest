@@ -664,7 +664,7 @@ body {
   padding-top: 130px;
   padding-bottom: 256px;
   background-image: url(../img/bg-reasons-top.svg), url(../img/bg-reasons-bottom.svg);
-  background-position: center top, center bottom;
+  background-position: center top -1px, center bottom -1px;
   background-repeat: no-repeat, no-repeat;
   background-color: #f4f4f4;
   background-size: contain; }
@@ -813,7 +813,7 @@ body {
     top: -160px;
     right: 0;
     left: 0;
-    bottom: 0;
+    bottom: -2px;
     width: 100%;
     background-image: url(../img/bg-technologies-top.svg);
     background-size: cover;
@@ -871,34 +871,10 @@ body {
   position: relative;
   padding-top: 283px;
   padding-bottom: 92px;
-  background-image: url(../img/bg-technologies-bottom.svg);
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: contain; }
-  .ba-ontouch:before {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(321.59deg, #A6E34F 10.66%, #C9F986 56.05%);
-    z-index: -1; }
-  .ba-ontouch:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-image: url(../img/snail-bg.png);
-    background-repeat: no-repeat;
-    background-position: right top 1px;
-    z-index: -1; }
+  background-image: url(../img/bg-technologies-bottom.svg), url(../img/bg-ontach.png);
+  background-position: center top -1px, right top 1px;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, cover; }
   @media screen and (min-width: 769px) {
     .ba-ontouch {
       text-align: left; } }
