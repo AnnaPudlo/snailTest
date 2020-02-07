@@ -1009,3 +1009,10 @@ body {
       border-color: #305C2D;
       color: #305C2D;
       transform: rotate(360deg); }
+
+.copyright-wrap {
+  text-align: right; }
+
+.copyright-info {
+  color: #305C2D;
+  font-size: 0.875rem; }

@@ -916,3 +916,14 @@ body {
         }
     }
 }
+
+.copyright {
+    &-wrap {
+        text-align: right;
+    }
+
+    &-info {
+        color: $textGreen;
+        font-size: 0.875rem;
+    }
+}
