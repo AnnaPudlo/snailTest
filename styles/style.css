@@ -53,7 +53,23 @@ body {
   color: #7B7B7B;
   background: linear-gradient(180deg, #A6E34F 0%, rgba(255, 255, 255, 0) 100%); }
   .ba-menu__item {
-    padding: 0.5rem 1rem; }
+    padding: 0.5rem 1rem;
+    position: relative;
+    overflow: hidden; }
+    .ba-menu__item:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #305C2D;
+      bottom: 0;
+      left: -100%;
+      transition: .3s; }
+    .ba-menu__item:hover {
+      color: #305C2D; }
+      .ba-menu__item:hover:after {
+        transform: translateX(100%); }
   @media screen and (min-width: 769px) {
     .ba-menu {
       display: flex;
@@ -69,8 +85,6 @@ body {
   .ba-menu__link {
     color: inherit;
     text-decoration: none; }
-    .ba-menu__link:hover {
-      color: #305C2D; }
   .ba-menu-btn {
     border: none;
     padding: 0;
