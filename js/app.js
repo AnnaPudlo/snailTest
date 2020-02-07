@@ -16,9 +16,6 @@ $(".ba-lang li a").click(function(e) {
     $(".ba-arrow").toggleClass("fa-angle-down fa-angle-up");
 });
 
-
-
-
 $(".ba-menu__link").click(function () {
     var elementClick = $(this).attr("href");
     var destination = $(elementClick).offset().top;
