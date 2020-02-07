@@ -15,14 +15,6 @@ $(".ba-lang li a").click(function(e) {
     $(".ba-arrow").toggleClass("fa-angle-down fa-angle-up");
 });
 
-$('.ba-btn-consult, .ba-menu-btn, .ba-btn-more, .ba-btn-submit').hover(
-    function () {
-        $(this).addClass('animated rubberBand');
-    },
-    function () {
-        $(this).removeClass('animated rubberBand');
-});
-
 $(".ba-menu__link").click(function () {
     var elementClick = $(this).attr("href");
     var destination = $(elementClick).offset().top;

@@ -144,6 +144,12 @@ body {
     color: #305C2D;
     margin-bottom: 5px; }
 
+.ba-btn-consult:hover, .ba-btn-more:hover, .ba-btn-submit:hover,
+.ba-menu-btn:hover,
+.ba-btn-more:hover,
+.ba-btn-submit:hover {
+  opacity: 0.75; }
+
 .ba-lang {
   position: absolute;
   bottom: 0;
