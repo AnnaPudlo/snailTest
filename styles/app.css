@@ -384,13 +384,12 @@ body {
 .ba-menu {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 2rem;
   font-size: 0.875rem;
   font-weight: 500;
-  color: #7B7B7B;
-  background: linear-gradient(180deg, #A6E34F 0%, rgba(255, 255, 255, 0) 100%); }
+  color: #7B7B7B; }
   .ba-menu__item {
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
     position: relative;
     overflow: hidden; }
     .ba-menu__item:after {
@@ -414,6 +413,7 @@ body {
       justify-content: space-between;
       background: none;
       margin: 0 auto;
+      padding: 1rem;
       max-width: 651px;
       width: 100%;
       color: #000; }
@@ -477,15 +477,18 @@ body {
       height: 38px;
       width: 42px;
       font-size: 2rem;
-      background-color: #305C2D;
+      background-color: #fff;
+      color: #305C2D;
       padding: 0;
       margin: 0 0.5rem;
       margin: 0 1rem; }
-  .ba-btn-more {
-    display: none; }
+  @media screen and (min-width: 769px) {
+    .ba-btn-more {
+      display: none; } }
   .ba-btn-submit {
     background-color: #305C2D;
-    margin: 0; }
+    margin: 0;
+    margin-top: 2.5rem; }
   .ba-btn-scroll {
     font-weight: 600;
     font-size: 0.625rem;
@@ -521,7 +524,8 @@ body {
     font-size: 0.75rem;
     line-height: 15px;
     color: #305C2D;
-    margin: 0 1rem; }
+    margin: 0 1rem;
+    z-index: 10; }
   .ba-lang-chosen {
     display: inline-block; }
   .ba-lang li {
@@ -532,15 +536,60 @@ body {
     text-decoration: none;
     color: #305C2D; }
 
+.ba-contacts-popup .ba-social {
+  margin: 2rem auto; }
+
+.ba-contacts-listwrap {
+  text-align: left; }
+
+.ba-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 20;
+  display: none;
+  align-items: center;
+  justify-content: center; }
+  .ba-modal--open {
+    display: flex; }
+  .ba-modal-content {
+    width: 300px;
+    height: 250px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 1px solid #7B7B7B;
+    padding: 1rem; }
+  .ba-modal-close {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #1e1e1e;
+    top: 10px;
+    right: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; }
+  .ba-modal-is-open {
+    overflow: hidden; }
+
 .ba-hero {
   height: calc(100vh - 91px);
   padding: 0;
-  background-image: url(../img/snail_banner.jpg);
+  background-image: url(../img/snail_banner-mobile.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden; }
+  @media screen and (min-width: 769px) {
+    .ba-hero {
+      background-image: url(../img/snail_banner.jpg); } }
   .ba-hero__scroll {
     position: absolute;
     bottom: 0;
@@ -753,23 +802,27 @@ body {
     background-image: url(../img/services-3.jpg);
     background-size: cover;
     background-repeat: no-repeat; }
-  .ba-service:hover:before {
-    top: 15px;
-    bottom: 15px;
-    left: 15px;
-    right: 15px;
-    background-color: rgba(255, 255, 255, 0.4); }
-  .ba-service:hover .ba-service__info {
-    display: none; }
-  .ba-service:hover .ba-btn-more {
-    display: block;
-    z-index: 1; }
-    .ba-service:hover .ba-btn-more:hover {
-      background-color: #305C2D;
-      opacity: 1; }
+  @media screen and (min-width: 769px) {
+    .ba-service:hover:before {
+      top: 15px;
+      bottom: 15px;
+      left: 15px;
+      right: 15px;
+      background-color: rgba(255, 255, 255, 0.4); }
+    .ba-service:hover .ba-service__info {
+      display: none; }
+    .ba-service:hover .ba-btn-more {
+      display: block;
+      z-index: 1; }
+      .ba-service:hover .ba-btn-more:hover {
+        background-color: #305C2D;
+        opacity: 1; }
+    .ba-service .ba-btn-more {
+      position: absolute;
+      top: 45%; } }
   .ba-service .ba-btn-more {
     position: absolute;
-    top: 45%; }
+    bottom: 2rem; }
   .ba-service__title {
     font-size: 1.25rem;
     line-height: 1em;
@@ -778,14 +831,15 @@ body {
     .ba-service__title:after {
       content: '';
       display: block;
-      width: 2px;
-      height: 30px;
+      width: 60px;
+      height: 2px;
       background-color: #305C2D;
       margin: 15px 0; }
     @media screen and (min-width: 769px) {
       .ba-service__title {
         font-size: 1.5rem; }
         .ba-service__title:after {
+          width: 2px;
           height: 60px; } }
   .ba-service__list {
     list-style: none;
@@ -841,9 +895,15 @@ body {
   .ba-technology-2 {
     padding-top: 85px; }
   .ba-technology_tal {
-    text-align: left;
     max-width: 465px;
     margin: 0 auto; }
+    @media screen and (min-width: 769px) {
+      .ba-technology_tal {
+        text-align: left; } }
+    .ba-technology_tal .ba-technology__desc {
+      text-align: left; }
+    .ba-technology_tal .ba-technology__title {
+      text-align: left; }
   .ba-technology__link {
     text-decoration: none;
     font-weight: 600;
@@ -862,6 +922,12 @@ body {
       margin-right: 20px; }
     .ba-technology__link:hover {
       letter-spacing: 0.2em; }
+    @media screen and (max-width: 768px) {
+      .ba-technology__link {
+        display: block;
+        text-align: center; } }
+  .ba-technology__btn {
+    margin: 2rem auto 0; }
   .ba-technology-video {
     width: 100%; }
     .ba-technology-video iframe {
@@ -872,10 +938,10 @@ body {
   position: relative;
   padding-top: 283px;
   padding-bottom: 92px;
-  background-image: url(../img/bg-technologies-bottom.svg), url(../img/bg-ontach.png);
-  background-position: center top -1px, right top 1px;
-  background-repeat: no-repeat, no-repeat;
-  background-size: contain, cover; }
+  background-image: url(../img/bg-technologies-bottom.svg), url(../img/snail-ontouch.png), url(../img/svg-linear.svg);
+  background-position: center top -1px, right top 1px, center top 1px;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: contain, contain, cover; }
   @media screen and (min-width: 769px) {
     .ba-ontouch {
       text-align: left; } }
@@ -883,7 +949,6 @@ body {
     content: none; }
   .ba-ontouch-form {
     max-width: 800px;
-    height: 180px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -907,14 +972,19 @@ body {
   border: none;
   border-bottom: 1px solid #305C2D;
   padding: 1rem;
-  background: transparent; }
+  background: transparent;
+  margin-top: 1rem; }
   .ba-inp::placeholder {
     color: #305C2D; }
 
 .ba-footer-wrapper {
   max-width: 981px;
   min-height: 200px;
-  padding-top: 56px; }
+  padding: 0 1rem 0 2rem; }
+  @media screen and (min-width: 769px) {
+    .ba-footer-wrapper {
+      padding: 0 1rem;
+      padding-top: 56px; } }
 
 .ba-footer__title {
   font-size: 1rem;
@@ -945,22 +1015,26 @@ body {
   font-weight: 500; }
 
 .ba-footer-media {
-  min-height: 136px;
-  padding-top: 1rem;
+  padding-top: 2rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between; }
-  @media screen and (min-width: 525px) {
+  justify-content: space-between;
+  flex-direction: column; }
+  @media screen and (min-width: 769px) {
     .ba-footer-media {
-      flex-direction: column; } }
+      min-height: 136px;
+      padding: 0; } }
 
 .ba-footer-info {
   max-width: 125px;
   margin: 0 auto; }
   @media screen and (max-width: 525px) {
     .ba-footer-info {
-      margin: 0; } }
+      margin: 0;
+      margin-bottom: 1rem; } }
 
 .ba-footer-contacts {
   max-width: 291px; }
@@ -985,6 +1059,13 @@ body {
       border-color: #305C2D;
       color: #305C2D;
       transform: rotate(360deg); }
+  .ba-social_bottom {
+    margin: 0 auto;
+    margin-top: 1rem;
+    padding-right: 1rem; }
+    @media screen and (min-width: 769px) {
+      .ba-social_bottom {
+        display: none; } }
 
 .copyright-wrap {
   padding: 0.5rem 2rem;

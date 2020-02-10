@@ -70,14 +70,13 @@ body {
 .ba-menu {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 2rem;
     font-size: 0.875rem;
     font-weight: 500;
     color: $textGray;
-    background: linear-gradient(180deg, #A6E34F 0%, rgba(255, 255, 255, 0) 100%);
 
     &__item {
-        padding: 0.5rem 1rem;
+        padding: 0.75rem 1rem;
         position: relative;
         overflow: hidden;       
         
@@ -108,6 +107,7 @@ body {
         justify-content: space-between;
         background: none;
         margin: 0 auto;
+        padding: 1rem;
         max-width: 651px;
         width: 100%;
         color: #000;
@@ -201,7 +201,8 @@ body {
             height: 38px;
             width: 42px;
             font-size: 2rem;
-            background-color: $textGreen;
+            background-color: #fff;
+            color: $textGreen;
             padding: 0;
             margin: 0 0.5rem;
             margin: 0 1rem;
@@ -210,13 +211,17 @@ body {
 
     &-more {
         @extend .ba-btn-consult;
-        display: none;
+
+        @media screen and (min-width: 769px) {
+            display: none;
+        }
     }
 
     &-submit {
         @extend .ba-btn-consult;
         background-color: $textGreen;
         margin: 0;
+        margin-top: 2.5rem;
     }
 
     &-scroll {
@@ -245,6 +250,7 @@ body {
         line-height: 15px;
         color: $textGreen;
         margin: 0 1rem;
+        z-index: 10;
     }
 
     &-chosen {
@@ -279,15 +285,78 @@ body {
     }
 }
 
+.ba-contacts{
+    &-popup {
+        .ba-social {
+            margin: 2rem auto;
+        }
+    }
+
+    &-listwrap {
+        text-align: left;
+    }
+}
+
+.ba-modal{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .45);
+    z-index: 20;
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+    
+    &--open{
+        display: flex;
+    }
+
+    &-content {
+        width: 300px;
+        height: 250px;
+        position: relative;
+        background-color: #fff;
+        border-radius: 20px;
+        border: 1px solid $textGray;
+        padding: 1rem;
+    }
+
+    &-close{
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        background-color: #fff;
+        border-radius: 50%;
+        border: 1px solid #1e1e1e;
+        top: 10px;
+        right: 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-is-open{
+        overflow: hidden;
+    }
+}
+
+
 .ba-hero {
     height: calc(100vh - #{$headerHeight});
     padding: 0;
-    background-image: url(../img/snail_banner.jpg);
+    background-image: url(../img/snail_banner-mobile.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
+
+    @media screen and (min-width: 769px) {
+        background-image: url(../img/snail_banner.jpg);
+    }
 
     &__scroll{
         position: absolute;
@@ -572,34 +641,42 @@ body {
         background-repeat: no-repeat;
     }
 
-    &:hover {
+    @media screen and (min-width: 769px) {
+        
+        &:hover {
 
-        &:before {
-            top: 15px;
-            bottom: 15px;
-            left: 15px;
-            right: 15px;
-            background-color:rgba(255, 255, 255, 0.4)
-        } 
+            &:before {
+                top: 15px;
+                bottom: 15px;
+                left: 15px;
+                right: 15px;
+                background-color:rgba(255, 255, 255, 0.4)
+            } 
 
-        .ba-service__info {
-            display: none;
+            .ba-service__info {
+                display: none;
+            }
+
+            .ba-btn-more {
+                display: block;
+                z-index: 1;
+                
+                &:hover {
+                    background-color: $textGreen;
+                    opacity: 1;
+                }
+            }
         }
 
         .ba-btn-more {
-            display: block;
-            z-index: 1;
-            
-            &:hover {
-                background-color: $textGreen;
-                opacity: 1;
-            }
+            position: absolute;
+            top: 45%;
         }
     }
-
+    
     .ba-btn-more {
         position: absolute;
-        top: 45%;
+        bottom: 2rem;
     }
 
     &__title {
@@ -611,8 +688,8 @@ body {
         &:after {
             content: '';
             display: block;
-            width: 2px;
-            height: 30px;
+            width: 60px;
+            height: 2px;
             background-color: $textGreen;
             margin: 15px 0;
         }
@@ -621,6 +698,7 @@ body {
             font-size: 1.5rem;
 
             &:after {
+                width: 2px;
                 height: 60px;
             }
         }
@@ -703,9 +781,20 @@ body {
     }
 
     &_tal {
-        text-align: left;
         max-width: 465px;
         margin: 0 auto;
+
+        @media screen and (min-width: 769px) {
+            text-align: left;
+        }
+
+        .ba-technology__desc {
+            text-align: left;
+        }
+
+        .ba-technology__title {
+            text-align: left;
+        }
     }
 
     &__link {
@@ -730,6 +819,15 @@ body {
         &:hover {
             letter-spacing: 0.2em;            
         }
+
+        @media screen and (max-width: 768px) {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    &__btn {
+        margin: 2rem auto 0;
     }
 
     &-video {
@@ -746,10 +844,10 @@ body {
     position: relative;
     padding-top: 283px;
     padding-bottom: 92px;
-    background-image: url(../img/bg-technologies-bottom.svg), url(../img/bg-ontach.png);
-    background-position: center top -1px, right top 1px;
-    background-repeat: no-repeat, no-repeat;
-    background-size: contain, cover;
+    background-image: url(../img/bg-technologies-bottom.svg), url(../img/snail-ontouch.png), url(../img/svg-linear.svg);
+    background-position: center top -1px, right top 1px, center top 1px;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: contain, contain, cover;
 
     @media screen and (min-width: 769px) {
         text-align: left;
@@ -763,7 +861,7 @@ body {
 
     &-form {
         max-width: 800px;
-        height: 180px;
+        // height: 180px;
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -791,6 +889,7 @@ body {
     border-bottom: 1px solid $textGreen;
     padding: 1rem;
     background: transparent;
+    margin-top: 1rem;
 
     &::placeholder {
         color: $textGreen;
@@ -801,7 +900,12 @@ body {
     &-wrapper {
         max-width: 981px;
         min-height: 200px;
-        padding-top: 56px;
+        padding: 0 1rem 0 2rem;
+
+        @media screen and (min-width: 769px) {
+            padding: 0 1rem;
+            padding-top: 56px;
+        }
     }
 
     &__title {
@@ -841,15 +945,18 @@ body {
     }
 
     &-media {
-        min-height: 136px;
-        padding-top: 1rem;
+        padding-top: 2rem;
+        padding-right: 1rem;
+        padding-bottom: 1rem;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-direction: column;
 
-        @media screen and (min-width: 525px) {
-            flex-direction: column;
+        @media screen and (min-width: 769px) {
+            min-height: 136px;
+            padding: 0;
         }
     }
 
@@ -859,6 +966,7 @@ body {
 
         @media screen and (max-width: 525px) {
             margin: 0;
+            margin-bottom: 1rem;
         }
     }
 
@@ -891,6 +999,16 @@ body {
             border-color: $textGreen;
             color: $textGreen;
             transform: rotate(360deg);
+        }
+    }
+
+    &_bottom {
+        margin: 0 auto;
+        margin-top: 1rem;
+        padding-right: 1rem;
+
+        @media screen and (min-width: 769px) {
+            display: none;
         }
     }
 }

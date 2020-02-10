@@ -29,6 +29,36 @@ $(".ba-menu__link").click(function () {
     var destination = $(elementClick).offset().top;
     $('html').animate({ scrollTop: destination }, 2000);
 });
+
+$('.ba-btn-consult').click(function () {
+    openModal();
+});
+
+let openModal = function () {
+    $('.ba-modal').addClass('ba-modal--open');
+    $('body').addClass('ba-modal-is-open');
+
+    $(document).on('keydown', function (e) {
+        if (e.keyCode == 27) {
+            closeModal();
+        }
+    });
+}
+
+let closeModal = function () {
+    $('.ba-modal').removeClass('ba-modal--open');
+    $('body').removeClass('ba-modal-is-open');
+    $(document).off('keydown', closeModal);
+}
+
+$('.ba-modal-close').on('click', closeModal);
+
+$('.ba-modal').on('click', function (e) {
+    let modalContent = $('.ba-modal-content');
+    if (!modalContent.is(e.target) && modalContent.has(e.target).length === 0) {
+        closeModal();
+    }
+});
     
 $(".ba-btn-scroll").click(function () {
     var destination = $('#about').offset().top;
