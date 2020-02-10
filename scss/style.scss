@@ -65,7 +65,6 @@ body {
         padding: 0;
         padding-right: 15px;
     }
-
 }
 
 .ba-menu {
@@ -220,7 +219,6 @@ body {
         margin: 0;
     }
 
-    
     &-scroll {
         font-weight: 600;
         font-size: 0.625rem;
@@ -274,7 +272,6 @@ body {
             background-color: $bgGray;
         }
     }
-
 
     &-link {
         text-decoration: none;
@@ -546,7 +543,6 @@ body {
     position: relative;
     z-index: 1;
     
-
     &:before {
         content: "";
         display: block;
@@ -720,7 +716,7 @@ body {
         letter-spacing: 0.1em;
         text-transform: uppercase;
         color: $textGreen;
-        
+      
         &:before {
             content: '';
             display: inline-block;
@@ -729,6 +725,10 @@ body {
             background-color: $textGreen;
             margin-bottom: 0.25em;
             margin-right: 20px;
+        }
+
+        &:hover {
+            letter-spacing: 0.2em;            
         }
     }
 
@@ -800,7 +800,7 @@ body {
 .ba-footer {
     &-wrapper {
         max-width: 981px;
-        min-height: 260px;
+        min-height: 200px;
         padding-top: 56px;
     }
 
@@ -897,11 +897,17 @@ body {
 
 .copyright {
     &-wrap {
-        text-align: right;
+        padding: 0.5rem 2rem;
+        text-align: center;
+        border-top: 1px solid #000;
+        height: auto;
+        margin-top: 1.5rem;
     }
 
     &-info {
         color: $textGreen;
-        font-size: 0.875rem;
+        font-size: 0.785rem;
+        margin: 0;
+        margin-left: auto;
     }
 }

@@ -3,23 +3,25 @@ $(".ba-menu-btn").click(function() {
     $(".ba-menu-btn").toggleClass("ba-btn-burger--active");
 });
 
+function dropLang() {
+    $(".ba-lang").toggleClass('hidden');
+    $(".ba-arrow").toggleClass("fa-angle-down fa-angle-up");
+}
+
 $(document).on('click', function(e) {
     if ((e.target.closest('.ba-lang-wrap') == null) && (!$('.ba-lang').hasClass('hidden'))) {
-        $(".ba-lang").toggleClass('hidden');
-        $(".ba-arrow").toggleClass("fa-angle-down fa-angle-up");
+        dropLang();
     }
 });
 
 $(".ba-btn-lang").click(function() {
-    $(".ba-lang").toggleClass('hidden');
-    $(".ba-arrow").toggleClass("fa-angle-down fa-angle-up");
+    dropLang();
 });
 
 $(".ba-lang li a").click(function(e) {
     e.preventDefault();
     $(".ba-lang-chosen").html($(this).html());
-    $(".ba-lang").toggleClass('hidden');
-    $(".ba-arrow").toggleClass("fa-angle-down fa-angle-up");
+    dropLang();
 });
 
 $(".ba-menu__link").click(function () {

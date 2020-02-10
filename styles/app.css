@@ -860,6 +860,8 @@ body {
       background-color: #305C2D;
       margin-bottom: 0.25em;
       margin-right: 20px; }
+    .ba-technology__link:hover {
+      letter-spacing: 0.2em; }
   .ba-technology-video {
     width: 100%; }
     .ba-technology-video iframe {
@@ -911,7 +913,7 @@ body {
 
 .ba-footer-wrapper {
   max-width: 981px;
-  min-height: 260px;
+  min-height: 200px;
   padding-top: 56px; }
 
 .ba-footer__title {
@@ -985,8 +987,14 @@ body {
       transform: rotate(360deg); }
 
 .copyright-wrap {
-  text-align: right; }
+  padding: 0.5rem 2rem;
+  text-align: center;
+  border-top: 1px solid #000;
+  height: auto;
+  margin-top: 1.5rem; }
 
 .copyright-info {
   color: #305C2D;
-  font-size: 0.875rem; }
+  font-size: 0.785rem;
+  margin: 0;
+  margin-left: auto; }
